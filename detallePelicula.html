@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETALLE PELICULA</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+
+        <section class="intro"> 
+            <img src="img/logoprog.png" alt="logo">
+        </section>
+
+        <section class="navbar">
+            <ul>
+                <li>
+                    <a href="./home.html"> Home </a> 
+                    <i class="fa-solid fa-caret-up fa-flip-vertical"> </i>
+                </li>
+                <li>
+                    <a href="generos.html"> Generos </a>
+                    <i class="fa-solid fa-caret-up fa-flip-vertical"> </i>
+                </li>
+                <li>
+                    <a href="./favoritos.html"> Favoritos</a>
+                    <i class="fa-solid fa-caret-up fa-flip-vertical"></i>
+                </li>
+            </ul>
+        </section>
+
+        <section class="Form">
+            <form action="./ResultadoBusqueda.html" method="get">
+                <div class="contenedor-input">
+                    <label for="busqueda"></label>
+                    <input type="text" name="Buscar" id="busqueda" placeholder="Buscar"> <i class="fa-solid fa-magnifying-glass"></i> 
+                </div>
+        </section>
+    </header>
+
+    <section class="detallepeli">
+        <div class="div">
+            <h3 class="titulo3"> AVATAR</h3>
+            <img class="fotodetail" src=".//img/avatar.jpeg"> 
+        </div>
+       
+        <div class="textopeli">
+            <p> Valoración: <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> </p>
+            <p> Duración: 192 minutos.</p>
+            <p> Fecha de estreno: 16 de diciembre de 2022.</p>
+            <p> Sinopsis: Jake Sully y Ney'tiri han formado una familia y hacen todo lo posible por permanecer juntos. Sin embargo, deben abandonar su hogar y explorar las regiones de Pandora cuando una antigua amenaza reaparece.</p>
+            <p> Género: <a href=".//detalleGenero.html">Drama</a> <button> Drama</button> <button> Ciencia Ficción</button></p>
+            <p> tengo que poner qiue se agregue a favoritos</p>
+            <button> Añadir a favoritos</button></a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p> Help Center</p>
+        <p> Cookie Preferences</p>
+        <p> Contact Us</p>
+        <p> Developed by: Iñaki Gallo, Clementina Rosella & Victoria Valencia</p>
+    </footer>
+    
+</body>
+</html>
