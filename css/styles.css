@@ -19,7 +19,6 @@ p{
     color: white;
     align-self: flex-start;
     width: 50%;
-    padding: 10px;
 }
 
 img {
@@ -67,7 +66,7 @@ img {
 
 
 
-/*agregado por vicky*/ 
+/*agregado por vicky --> lo use para hacer el home*/ 
 body{
     background-color: black;
 }
@@ -303,4 +302,11 @@ h3{
     margin-left: 30px;
     margin-right: 30px;
     background-image: url(../img/fondodorado.jpg);
+}
+
+.botongenero{
+    text-decoration: none;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
 }
