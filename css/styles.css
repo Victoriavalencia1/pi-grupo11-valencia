@@ -410,3 +410,46 @@ h3{
         a:hover {
             background-color: #555;
         }        
+
+/* style para el detalle pelicula*/
+
+.div{
+    background-color: rgb(74, 74, 255);
+    background-image: url(../img/peliculaavatar.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.textopeli{
+    padding: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    background-color: rgb(88, 88, 250);
+}
+
+.detallepeli{
+    width: 100%;
+}
+
+.fotodetail{
+    width: 30%;
+    height: 515px;
+    border: 5px solid white;
+}
+
+p{
+    color: white;
+    size: 30px; 
+}
+
+.titulo3{
+    color: rgb(88, 88, 250);
+    background-color: aliceblue;
+    font-size: 50px;
+    margin: 10px;
+}
+
+
