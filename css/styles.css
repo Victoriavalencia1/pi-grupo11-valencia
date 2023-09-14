@@ -451,5 +451,58 @@ p{
     font-size: 50px;
     margin: 10px;
 }
+.genero-1{
+    border: 10px solid grey;
+    width: 25%;
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+}
+.genero-2{
+    border: 10px solid grey;
+    width: 25%;
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+}
+.genero-3{
+    border: 10px solid grey;
+    width: 25%;
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+}
+.genero-4{
+    border: 10px solid grey;
+    width: 25%;
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+}
+.genero-5{
+    border: 10px solid grey;
+    width: 25%;
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+}
+.accion{
+    background-color: rgb(173, 169, 169);
+    width: 1200px;
+    height: 200px;
+    background-image: url(../img/accion.jpeg);
+    background-repeat: no-repeat;
+    background-size: 30%;
+}
+
+.detallegenero{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.pelisaccion{
+    color: white;
+    text-align: right;
+    padding: 15px;
+}
 
 
