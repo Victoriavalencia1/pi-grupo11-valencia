@@ -3,27 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GENEROS</title>
     <link rel="stylesheet" href="./css/styles.css">
-</head>
-<body class="bodygen">
-    <header>
-        <h1 class="genpeliserie">Géneros de Películas y Series</h1>
+    <title>DETALLE SERIE</title>
+<body>
+    <header class="headergeneros">
+
+        <section class="intro"> 
+            <img src="img/logoprog.png" alt="logo">
+        </section>
+
+        <section class="navbar">
+            <ul>
+                <li>
+                    <a href="./home.html"> Home </a> 
+                    <i class="fa-solid fa-caret-up fa-flip-vertical"> </i>
+                </li>
+                <li>
+                    <a href="generos.html"> Generos </a>
+                    <i class="fa-solid fa-caret-up fa-flip-vertical"> </i>
+                </li>
+                <li>
+                    <a href="./favoritos.html"> Favoritos</a>
+                    <i class="fa-solid fa-caret-up fa-flip-vertical"></i>
+                </li>
+            </ul>
+        </section>
+
+        <section class="Form">
+            <form action="./ResultadoBusqueda.html" method="get">
+                <div class="contenedor-input">
+                    <label for="busqueda"></label>
+                    <input type="text" name="Buscar" id="busqueda" placeholder="Buscar"> <i class="fa-solid fa-magnifying-glass"></i> 
+                </div>
+        </section>
     </header>
-    <section class="generos">
-        <div class="genero">
-            <img src="./img/accion.jpg" alt="Acción">
-            <h2>Acción</h2>
-            <p>Descripción breve del género de acción.</p>
-            <a href="detalleGenero.html">Ver más</a>
-        </div>
-        <div class="genero">
-            <img src="./img/drama.jpg" alt="Drama">
-            <h2>Drama</h2>
-            <p>Descripción breve del género de drama.</p>
-            <a href="detalle_genero.html">Ver más</a>
-        </div>
-        
-    </section>
+
+    <main>
+        <section class="generosgeneros">
+            <div class="titulo-peliculas">
+                <h3 class="titulogeneros"> GÉNEROS</h3>
+            </div>
+
+            <div class="generos-peliculas">
+                <h4>PELICULAS </h4>
+                <ul>
+                    <li class="cajagenero"> <a href="./detalleGenero.html">Acción</a> </li>
+                    <li class="cajagenero"> <a href="./detalleGenero.html">Aventura</a></li>
+                    <li class="cajagenero"> <a href="./detalleGenero.html">Anime</a></li>
+                    <li class="cajagenero"> <a href="./detalleGenero.html">Argentinas</a></li>
+                    <li class="cajagenero"> <a href="./detalleGenero.html">Niños y familia</a></li>
+                    <li class="cajagenero"> <a href="./detalleGenero.html">Comedias</a></li>
+                    <li class="cajagenero"> <a href="./detalleGenero.html">Documentales</a></li>
+                    <li class="cajagenero"> <a href="./detalleGenero.html">Dramas</a></li>
+                    <li class="cajagenero"> <a href="./detalleGenero.html">Fantasía</a></li>
+                    <li class="cajagenero"> <a href="./detalleGenero.html">Hollywood</a></li>
+                    <li class="cajagenero"> <a href="./detalleGenero.html">Horror</a></li>
+                    <li class="cajagenero"> <a href="./detalleGenero.html">Internacionales</a></li>
+                    <li class="cajagenero"> <a href="./detalleGenero.html">Policiales</a></li>
+                    <li class="cajagenero"> <a href="./detalleGenero.html">Romance</a></li>
+                    <li class="cajagenero"> <a href="./detalleGenero.html">Ciencia Ficción</a></li>
+                </ul>
+            </div>
+
+            <div class="generos-series">
+                <h4>SERIES </h4>
+                <ul>
+                    <li class="cajagenero"><a href="./detalleGenero.html">Acción</a> </li>
+                    <li class="cajagenero"><a href="./detalleGenero.html">Aventura</a></li>
+                    <li class="cajagenero"><a href="./detalleGenero.html">anime</a></li>
+                    <li class="cajagenero"><a href="./detalleGenero.html">Argentinas</a></li>
+                    <li class="cajagenero"><a href="./detalleGenero.html">Niños y familia</a></li>
+                    <li class="cajagenero"><a href="./detalleGenero.html">Comedias</a></li>
+                    <li class="cajagenero"><a href="./detalleGenero.html">Documentales</a></li>
+                    <li class="cajagenero"><a href="./detalleGenero.html">Dramas</a></li>
+                    <li class="cajagenero"><a href="./detalleGenero.html">Fantasía</a></li>
+                    <li class="cajagenero"><a href="./detalleGenero.html">Hollywood</a></li>
+                    <li class="cajagenero"><a href="./detalleGenero.html">Horror</a></li>
+                    <li class="cajagenero"><a href="./detalleGenero.html">Internacionales</a></li>
+                    <li class="cajagenero"><a href="./detalleGenero.html">Policiales</a></li>
+                    <li class="cajagenero"><a href="./detalleGenero.html">Ciencia Ficción</a></li>
+                    <li class="cajagenero"><a href="./detalleGenero.html">Ciencia Ficción</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="headergeneros">
+        <p> Help Center</p>
+        <p> Cookie Preferences</p>
+        <p> Contact Us</p>
+        <p> Developed by: Iñaki Gallo, Clementina Rosella & Victoria Valencia</p>
+    </footer>
 </body>
 </html>
