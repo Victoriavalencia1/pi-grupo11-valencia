@@ -73,7 +73,6 @@ img {
 }
 body{
     background-color: black;
-    background-image: url(../img/fondodorado.jpg);
 }
 
 .header{
@@ -387,6 +386,10 @@ h3{
     height: 400px;
 }
 
+.caballero{
+    width: 287px;
+    height: 404px;
+}
 
 
 .bodygen {
@@ -547,6 +550,7 @@ p{
 
 .contenedorpeliculas{
     padding: 0px;
+    margin-top: 150px;
 }
 .pelicula-1{
     width: 100%;
@@ -556,6 +560,7 @@ p{
 .contenedorseries{
     padding: 0px;
 }
+
 .serie-1{
     width: 100%;
 }
@@ -602,9 +607,6 @@ body{
     display: flex;
 }
 
-.Series{
-    margin: 0px;
-}
 
 .footer{
     display: flex;
@@ -623,9 +625,47 @@ body{
     padding: 0px 25%;
 }
 
+.titulo3{
+    font-size: 80px;
+    text-align: center;
+}
 
+.detallepeli{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
 
+.fotodetail{
+    width: 100%;
+}
 
+.textopeli{
+    padding: 0px 10px;
+    margin: 0px;
+    text-align: center;
+}
 
+p{
+    width: 100%;
+}
+
+.accion{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    background-size: 100%;
+}
+
+.genero-2{
+    margin-top: 150px;
+}
+
+.pelisaccion{
+    margin-top: 165px;
+    text-align: center;
+}
 }
 
