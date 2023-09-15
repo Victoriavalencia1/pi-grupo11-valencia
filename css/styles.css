@@ -383,6 +383,10 @@ h3{
     height: 400px;
 }
 
+.caballero{
+    width: 287px;
+    height: 404px;
+}
 
 
 .bodygen {
@@ -598,9 +602,6 @@ body{
     display: flex;
 }
 
-.Series{
-    margin: 0px;
-}
 
 .footer{
     display: flex;
@@ -643,6 +644,22 @@ body{
 
 p{
     width: 100%;
+}
+
+.accion{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: trasnparent;
+    background-size: 100%;
+}
+
+h1{
+    margin-top: 155px;
+}
+
+.genero-2{
+    margin-top: 150px;
 }
 
 }
