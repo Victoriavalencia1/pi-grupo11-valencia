@@ -67,6 +67,10 @@ img {
 
 
 /*agregado por vicky --> lo use para hacer el home*/ 
+#img-logo{
+    border-radius: 90%;
+    border: none;
+}
 body{
     background-color: black;
 }
@@ -92,6 +96,7 @@ body{
 img{
     width: 200px;
     height: 125px;
+    border-radius: 50%;
 }
 .navbar li {
     list-style-type: none; 
@@ -332,9 +337,8 @@ h3{
 }
 
 .Peliculasfav{
-    
-    width: 100%; 
-    
+    display: flex;
+    width: 100%;  
     border-radius: 5px;
     height: 100%;
     padding: 20px;
@@ -353,6 +357,28 @@ h3{
     margin: 20px;
     text-align: center;
     height: 20%;
+}
+.ulgen{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+.ache4gen{
+    color: red;
+    text-align: left;
+    font-size: larger;
+}
+
+.cajagenero{
+    background-color: red;
+    color: black;
+    padding-top: 2px;
+    margin-top: 10px;
+}
+.generosseries{
+    height: 400px;
 }
 
 
@@ -381,6 +407,11 @@ h3{
             gap: 20px;
             justify-content: center;
             padding: 20px;
+            background-image: url(../img/fondogenero.avif);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: auto;
+            height: 100px;
         }
         .genero {
             max-width: 300px;
