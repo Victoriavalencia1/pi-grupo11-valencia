@@ -503,18 +503,3 @@ p{
     text-align: right;
     padding: 15px;
 }
-/* para el detalle serie*/
-.textoserie{
-    padding: 20px;
-    margin-left: 200px;
-    margin-right: 200px;
-    background-color: rgb(88, 88, 250);
-}
-
-.serie-detail{
-    width: 100%;
-    height: 515px;
-    border: 5px solid white;
-}
-
-
