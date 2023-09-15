@@ -410,7 +410,9 @@ h3{
         a:hover {
             background-color: #555;
         }        
-        .headergeneros {background-color: black;}
+        .headergeneros { display: flex;
+            background-color: black;
+            }
         .ache4gen{color: white;}
         .titulogeneros{text-align: center;}
         .cajagenero{display: flex;
