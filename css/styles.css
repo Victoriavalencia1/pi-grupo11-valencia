@@ -621,6 +621,7 @@ body{
 
 .titulo3{
     font-size: 80px;
+    text-align: center;
 }
 
 .detallepeli{
@@ -635,7 +636,7 @@ body{
 }
 
 .textopeli{
-    padding: 0px;
+    padding: 0px 10px;
     margin: 0px;
     text-align: center;
 }
