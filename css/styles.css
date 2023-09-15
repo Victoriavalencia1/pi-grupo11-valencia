@@ -193,7 +193,9 @@ h2{
     margin: 5%;
     padding: 50px;
     margin-top: 0px;
+    display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .contenedorseries{
@@ -502,4 +504,19 @@ p{
     color: white;
     text-align: right;
     padding: 15px;
+}
+
+
+/* vamos a hacer responsive*/
+@media(max-width: 420px){
+
+.pelicula-1{
+    width: 100%;
+}
+
+.serie-1{
+    width: 100%;
+}
+
+
 }
