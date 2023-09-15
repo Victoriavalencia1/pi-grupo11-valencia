@@ -73,6 +73,7 @@ img {
 }
 body{
     background-color: black;
+    background-image: url(../img/fondodorado.jpg);
 }
 
 .header{
