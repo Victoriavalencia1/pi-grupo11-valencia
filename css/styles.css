@@ -510,13 +510,83 @@ p{
 /* vamos a hacer responsive*/
 @media(max-width: 420px){
 
+.contenedorpeliculas{
+    padding: 0px;
+}
 .pelicula-1{
     width: 100%;
 }
 
+
+.contenedorseries{
+    padding: 0px;
+}
 .serie-1{
     width: 100%;
 }
 
+.valorada-1{
+    width: 100%;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+}
+
+.navbar{
+    width: 100%;
+    padding: 0px;
+}
+
+.intro{
+    width: 100%;
+}
+
+.navbar-ul{
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+}
+
+.Form{
+    width: 50%;
+}
+
+.navbar li{
+    width: 100%;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.contenedorinput{
+    display: flex;
+}
+
+.Series{
+    margin: 0px;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer p{
+    text-align: center;
+    width: 100%;
+}
+
+#integrantes{
+    width: 50%;
+    padding: 0px 25%;
+}
 
 }
+
