@@ -73,7 +73,6 @@ img {
 }
 body{
     background-color: black;
-    background-image: url(../img/fondodorado.jpg);
 }
 
 .header{
@@ -620,6 +619,30 @@ body{
     padding: 0px 25%;
 }
 
+.titulo3{
+    font-size: 80px;
+}
+
+.detallepeli{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.fotodetail{
+    width: 100%;
+}
+
+.textopeli{
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+}
+
+p{
+    width: 100%;
+}
 
 }
 
