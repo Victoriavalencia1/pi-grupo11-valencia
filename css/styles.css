@@ -400,7 +400,6 @@ h3{
         a {
             display: block;
             text-decoration: none;
-            background-color: #333;
             color: #fff;
             padding: 5px 10px;
             border-radius: 5px;
@@ -517,4 +516,5 @@ p{
     height: 515px;
     border: 5px solid white;
 }
+
 
