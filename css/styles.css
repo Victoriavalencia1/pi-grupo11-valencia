@@ -159,34 +159,7 @@ h2{
     margin: 20px;
     text-align: center;
 }
-.pelicula-2{
-    border: 10px solid #de3131;
-    width: 25%;
-    display: inline-block;
-    margin: 20px;
-    text-align: center;
-}
-.pelicula-3{
-    border: 10px solid #de3131;
-    width: 25%;
-    display: inline-block;
-    margin: 20px;
-    text-align: center;
-}
-.pelicula-4{
-    border: 10px solid #de3131;
-    width: 25%;
-    display: inline-block;
-    margin: 20px;
-    text-align: center;
-}
-.pelicula-5{
-    border: 10px solid #de3131;
-    width: 25%;
-    display: inline-block;
-    margin: 20px;
-    text-align: center;
-}
+
 .Peliculas{
     margin-left: 30px;
     margin-right: 30px;
@@ -234,34 +207,7 @@ h3{
     margin: 20px;
     text-align: center;
 }
-.serie-2{
-    border: 10px solid #de3131;
-    width: 20%;
-    display: inline-block;
-    margin: 20px;
-    text-align: center;
-}
-.serie-3{
-    border: 10px solid #de3131;
-    width: 20%;
-    display: inline-block;
-    margin: 20px;
-    text-align: center;
-}
-.serie-4{
-    border: 10px solid #de3131;
-    width: 20%;
-    display: inline-block;
-    margin: 20px;
-    text-align: center;
-}
-.serie-5{
-    border: 10px solid #de3131;
-    width: 20%;
-    display: inline-block;
-    margin: 20px;
-    text-align: center;
-}
+
 .fotocasa{
     width: 90%;
     height: auto;
@@ -550,6 +496,15 @@ p{
     background-image: url(../img/fondodorado.jpg);
 }
 
+.contenedorgenero{
+    margin: 5%;
+    padding: 50px;
+    margin-top: 0px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 
 
 /* vamos a hacer responsive*/
@@ -557,7 +512,6 @@ p{
 
 .contenedorpeliculas{
     padding: 0px;
-    margin-top: 115px;
 }
 .pelicula-1{
     width: 100%;
@@ -691,6 +645,11 @@ p{
 
 .generosgeneros{
     height: 2300px;
+}
+
+.contenedorgenero{
+    padding: 0px;
+    margin-top: 115px;
 }
 
 }
