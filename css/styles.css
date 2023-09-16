@@ -367,13 +367,14 @@ h3{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    list-style-type: none;
 
 }
 
 .ache4gen{
     color: red;
     text-align: left;
-    font-size: larger;
+    font-size: 40px;
 }
 
 .cajagenero{
@@ -545,6 +546,12 @@ p{
 }
 
 
+.generosgeneros{
+    background-image: url(../img/fondodorado.jpg);
+}
+
+
+
 /* vamos a hacer responsive*/
 @media(max-width: 420px){
 
@@ -649,6 +656,7 @@ body{
 
 p{
     width: 100%;
+    text-align: center;
 }
 
 .accion{
@@ -668,7 +676,21 @@ p{
     text-align: center;
 }
 
-
-
+.ache4gen {
+    text-align: center;
 }
 
+.ulgen{
+    display: list-item;
+    padding: 0px;
+}
+
+.cajagenero{
+    display: flex;
+}
+
+.generosgeneros{
+    height: 2300px;
+}
+
+}
