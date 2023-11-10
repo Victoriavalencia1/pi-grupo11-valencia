@@ -1,3 +1,4 @@
+let acaVaLaAPIKey = "99871c7c00dfc64424c61b446dd23039";
 
 let pagina= 1;
 const btnAnterior = document.getElementById('btnAnterior');
@@ -17,7 +18,7 @@ btnAnterior.addEventListener('click', function(){
     }
 });
 
-let endpoint= `https://api.themoviedb.org/3/movie/popular?api_key=99871c7c00dfc64424c61b446dd23039&page=${pagina}`;
+let endpoint= `https://api.themoviedb.org/3/movie/popular?api_key=99871c7c00dfc64424c61b446dd23039&page=${acaVaLaAPIKey}`;
 
 fetch(endpoint)
 .then(function(response) {
