@@ -506,6 +506,12 @@ p{
 }
 
 
+h6{
+    color: white;
+    font-size: 15px;
+    text-align: center;
+}
+
 
 /* vamos a hacer responsive*/
 @media(max-width: 420px){
