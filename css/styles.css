@@ -151,6 +151,7 @@ h1{
 }
 h2{
     color:antiquewhite;
+    text-align: center;
 }
 .pelicula-1{
     border: 10px solid #de3131;
@@ -510,6 +511,9 @@ h6{
     color: white;
     font-size: 15px;
     text-align: center;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 5px;
 }
 
 #fotofooter{

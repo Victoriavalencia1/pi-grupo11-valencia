@@ -1,8 +1,8 @@
 let qs = location.search;
 let qsObj= new URLSearchParams(qs);
-let nombrePelicula= qsObj.get("idPelicula");
+let nombrePelicula= qsObj.get("NombrePelicula");
 
-let url= `https://api.themoviedb.org/3/search/movie?api_key=${acaVaLaAPIKey}&query=${Buscar}`
+let url= `https://api.themoviedb.org/3/search/movie?api_key=${acaVaLaAPIKey}&query=${nombrePelicula}`
 
 fetch(url)
 .then(function(res) {
