@@ -512,6 +512,10 @@ h6{
     text-align: center;
 }
 
+#fotofooter{
+    width: 200px;
+    border: none;
+}
 
 /* vamos a hacer responsive*/
 @media(max-width: 420px){
