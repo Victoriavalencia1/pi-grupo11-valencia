@@ -39,7 +39,7 @@ fetch(endpoint)
         allPeliculas += `
           <div>
             <h2>${titulo}</h2>
-            <a href="./detalle-Pelicula.html">
+            <a href="./detalle-Pelicula.html?idPelicula=${peliculas[i].id}">
               <img class="fotopelicula" src="${imagenURL}">
             </a>
           </div>`;
