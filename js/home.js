@@ -2,7 +2,7 @@ let acaVaLaAPIKey = "99871c7c00dfc64424c61b446dd23039";
 
 let urlPelisPopu= `https://api.themoviedb.org/3/movie/popular?api_key=${acaVaLaAPIKey}`;
 let urlSeriesPopu= `https://api.themoviedb.org/3/tv/popular?api_key=${acaVaLaAPIKey}`;
-let urlMasValoradas= `https://api.themoviedb.org/3/movie/top_rated?api_key=${acaVaLaAPIKey}`
+let urlMasValoradas= `https://api.themoviedb.org/3/tv/top_rated?api_key=${acaVaLaAPIKey}`;
 
 
 
