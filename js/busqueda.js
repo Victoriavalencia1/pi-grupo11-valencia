@@ -7,6 +7,7 @@ let nombrePelicula= qsObj.get("NombrePelicula");
 let url= `https://api.themoviedb.org/3/search/movie?api_key=${acaVaLaAPIKey}&query=${nombrePelicula}`;
 
 let contenedorBuscador= document.querySelector(".contenedorpeliculas");
+let miPelicula= document.querySelector(".miPelicula");
 
 
 fetch(url)
@@ -32,6 +33,7 @@ fetch(url)
     }
        
     contenedorBuscador.innerHTML = contenido;
+    miPelicula.innerText= nombrePelicula;
 
 })
 

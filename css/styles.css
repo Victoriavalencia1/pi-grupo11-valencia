@@ -521,6 +521,12 @@ h6{
     border: none;
 }
 
+#termino{
+    font-size: 30px;
+}
+
+
+
 /* vamos a hacer responsive*/
 @media(max-width: 420px){
 
