@@ -30,7 +30,7 @@ fetch(urlGeneroPeli)
 .catch(function(error) {
     console.log(error);
 });
-/segundo fetch/
+/* /segundo fetch*/
 
 fetch(urlGeneroSerie)
 .then(function(response) {
