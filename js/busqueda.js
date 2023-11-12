@@ -23,7 +23,7 @@ fetch(url)
     for (let i = 0; i <8; i++) {
 
         console.log(miData[i]);
-        contenido += `<article>
+        contenido += `<article class="pelicula-1">
                         <h2>${miData[i].title}</h2>
                         <a href="./detalle-Pelicula.html?idPelicula=${miData[i].id}"> 
                         <img class="fotopelicula" src="https://image.tmdb.org/t/p/w500/${miData[i].poster_path}"> 
