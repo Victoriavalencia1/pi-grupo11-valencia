@@ -62,7 +62,7 @@ fetch(urlSeriesPopu)
         console.log(miData[i]);
         contenido += `<article class="pelicula-1">
                         <h2>${miData[i].title}</h2>
-                        <a href="./detalle-Pelicula.html?idPelicula=${miData[i].id}"> 
+                        <a href="./detalle-serie.html?idSerie=${miData[i].id}"> 
                         <img class="fotopelicula" src="https://image.tmdb.org/t/p/w500/${miData[i].poster_path}"> 
                         </a>
                         <h6>${miData[i].release_date}</h6>
@@ -97,7 +97,7 @@ fetch(urlMasValoradas)
         console.log(miData[i]);
         contenido += `<article class="pelicula-1">
                         <h2>${miData[i].title}</h2>
-                        <a href="./detalle-Pelicula.html?idPelicula=${miData[i].id}"> 
+                        <a href="./detalle-serie.html?idSerie=${miData[i].id}"> 
                         <img class="fotopelicula" src="https://image.tmdb.org/t/p/w500/${miData[i].poster_path}"> 
                         </a>
                         <h6>${miData[i].release_date}</h6>

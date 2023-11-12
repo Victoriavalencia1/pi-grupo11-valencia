@@ -1,46 +1,38 @@
+let acaVaLaAPIKey = "99871c7c00dfc64424c61b446dd23039";
+
 let qs= location.search;
 let qsObj = new URLSearchParams(qs);
-let idPersonaje = qsObj.get("idPersonaje");
+let id_serie = qsObj.get("idSerie");
 
-let url = `https://api.themoviedb.org/3/movie/${idPersonaje}?api_key=99871c7c00dfc64424c61b446dd23039`;
-<script>
-    let, seriesDetails ={
-        coverImage} "./img/gossip.jpeg",
-        title: "Gossip Girl",
-        rating: "4.5",
-        releaseDate: "19/09/2007",
-        duration: "6 seasons",
-        synopsis: "\"Gossip Girl\" is a drama and romance series...",
-        genres: ["Teen Drama", "Romantic Cinema"],
-        recommendations: [
-             title: "Recommendation 1", poster: "./img/recommendation1.jpg" ,
-             title: "Recommendation 2", poster:  "./img/recommendation2.jpg" ,
-         
-        ]
-    {"}"};
+let titulo= document.querySelector(".titulo3");
+let imagen= document.querySelector(".fotodetail");
+let calificacion= document.querySelector(".valoracion");
+let fechaEstreno= document.querySelector(".fecha");
+let sinopsis= document.querySelector(".textodesc");
+let genero= document.querySelector(".botongenero");
 
-    document.getElementById("img-logo").src = seriesDetails.coverImage;
-    document.querySelector(".titulo3").innerText = seriesDetails.title;
-    // Update other elements for series details...
+let urlDetalleSerie = `https://api.themoviedb.org/3/tv/${id_serie}?api_key=${acaVaLaAPIKey}`;
 
-    document.getElementById("ver-recomendaciones").addEventListener("click", () = {
-        document.getElementById("recomendaciones-section").classList.toggle("hidden")}
+fetch(urlDetalleSerie)
+.then(function(response) {
+    return response.json()
+})
+.then(function(data) {
 
-        const recommendationsContainer = document.getElementById("recomendaciones-container");
-        recommendationsContainer.innerHTML = "";
+    console.log(data);
 
-        seriesDetails.recommendations.forEach((recommendation)  {
-            let }recommendationElement = document.createElement("div");
-            recommendationElement.innerHTML = `<img src="${recommendation.poster}" alt="${recommendation.title}"/>`;
-        
-            recommendationElement.addEventListener("click", ()  
-                console.log(`Redirect to detail page of ${recommendation.title}`);
-            );
+    imagen.src = `https://image.tmdb.org/t/p/w500/${data.poster_path}`;
+    titulo.innerText= data.name;
+    calificacion.innerText = `Popularidad: ${data.popularity}`;
+    fechaEstreno.innerText = `Fecha de estreno: ${data.first_air_date}`;
+    sinopsis.innerText= data.overview;
+    let generos = data.genres.map((genre) => genre.name);
+    genero.innerText = `Géneros: ${generos.join(", ")}`;
 
-            recommendationsContainer.appendChild(recommendationElement);
-        {"}"});
-        );
-</script>
+})
 
+.catch(function(error) {
+    console.log(error);
+});
 
 
