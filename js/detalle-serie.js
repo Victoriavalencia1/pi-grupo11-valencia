@@ -38,9 +38,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 /*recomendaciones*/
-    var urlParams = new URLSearchParams(window.location.search);
-        var query = urlParams.get("idSerie");
-        var url = `https://api.themoviedb.org/3/tv/${id_serie}/recommendations?api_key=${acaVaLaAPIKey}`
+ 
+        let url = `https://api.themoviedb.org/3/tv/${id_serie}/recommendations?api_key=${acaVaLaAPIKey}`
     
         let recomendaciones = document.querySelector("#button");
         recomendaciones.addEventListener("click", function () {
@@ -59,9 +58,9 @@ document.addEventListener('DOMContentLoaded', function () {
     
             let li = "";
             for (var i = 0; i < 5; i++) {
-            var id = data.results[i].id;
-            var title = data.results[i].name;
-            var foto = data.results[i].poster_path;
+            let id = data.results[i].id;
+            let title = data.results[i].name;
+            let foto = data.results[i].poster_path;
 
             li += `<li class='li recomendados-item'>
                         <p class='titulos'>${title}</p>
@@ -79,22 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return console.log("Error" + error);
         })
 
-        // Que se abran las recomendaciones
-      var recom = document.querySelector('#ver-recomendaciones')
-      recom.addEventListener ("click", function() {
-        // cuando clickeas en el boton se abren las recomendaciones
-            var ul = document.querySelector("ul.recomen")
-            ul.classList.toggle("display-none")
-    })
+   
         })
-
-        
-    // Que se abran las recomendaciones
-      var recom = document.querySelector('#ver-recomendaciones')
-      recom.addEventListener ("click", function() {
-        // cuando clickeas en el boton se abren las recomendaciones
-            var ul = document.querySelector("ul.recomen")
-            ul.classList.toggle("display-none")
-    })
 
 });
