@@ -6,7 +6,7 @@ window.addEventListener("load",function(){
     var urlParams = new URLSearchParams(window.location.search);
     var query = urlParams.get("id");
     // buscar en la URL de la pagina lo que queremos agarrar, en este caso el id
-    var url = 'https://api.themoviedb.org/3/movie/"+ query + "/videos?api_key=99871c7c00dfc64424c61b446dd2'
+    var url = "https://api.themoviedb.org/3/movie/"+ query + "/videos?api_key=99871c7c00dfc64424c61b446dd2"
     var urlTrailer = ""
     
     fetch(url)
@@ -33,7 +33,7 @@ window.addEventListener("load",function(){
             .then(function(detalle){
               console.log(detalle)
     
-              var ul = document.querySelector("ul.detalles")
+              var ul = document.querySelector(".detallepeli")
               var urlposter = "https://image.tmdb.org/t/p/original"
               var arrayGeneros = detalle.genres
     

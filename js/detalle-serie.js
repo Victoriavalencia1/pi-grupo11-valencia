@@ -27,7 +27,7 @@ fetch(urlDetalleSerie)
     fechaEstreno.innerText = `Fecha de estreno: ${data.first_air_date}`;
     sinopsis.innerText= data.overview;
     let generos = data.genres.map((genre) => genre.name);
-    genero.innerText = `Géneros: ${generos.join(", ")}`;
+    genero.innerText = `${generos.join(", ")}`;
 
 })
 
