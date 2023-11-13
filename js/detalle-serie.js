@@ -55,21 +55,21 @@ document.addEventListener('DOMContentLoaded', function () {
     
             var ul = document.querySelector("ul.recomen")
     
-            for (var i = 0; i < data.results.length; i++) {
+            let li = "";
+            for (var i = 0; i < 5; i++) {
             var id = data.results[i].id;
-            var title = data.results[i].title;
+            var title = data.results[i].name;
             var foto = data.results[i].poster_path;
-    
-            li = "<li class='li'>"
-                li += "<p class='titulos'>"+ title + "</p>"
-                li += "<a href='detalle-Pelicula.html?idSerie=" + id + "'>"
-                li += "<img class=imgPelis src=https://image.tmdb.org/t/p/w500/"+ foto + ">"
-                li += "</a>"
-            li += "</li>"
-    
-            ul.innerHTML += li
-    
+
+            li += `<li class='li recomendados-item'>
+                        <p class='titulos'>${title}</p>
+                        <a href='detalle-Pelicula.html?idSerie=${id}'>
+                            <img class="imgPelis" src="https://image.tmdb.org/t/p/w500/${foto}" >
+                        </a>
+                   </li>`
             }
+
+            ul.innerHTML = li
     
         })
     
