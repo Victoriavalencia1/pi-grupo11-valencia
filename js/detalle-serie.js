@@ -40,8 +40,11 @@ document.addEventListener('DOMContentLoaded', function () {
 /*recomendaciones*/
     var urlParams = new URLSearchParams(window.location.search);
         var query = urlParams.get("idSerie");
-        var url = `https://api.themoviedb.org/3/movie/"+ ${query} + "/recommendations?api_key=${acaVaLaAPIKey}&language=en-US&page=1`
+        var url = `https://api.themoviedb.org/3/movie/"${query}/recommendations?api_key=${acaVaLaAPIKey}&language=en-US&page=1`
     
+        let recomendaciones = document.querySelector("#button");
+        recomendaciones.addEventListener("click", function () {
+        
         fetch(url)
         .then(function(respond) {
             return respond.json();
@@ -73,7 +76,17 @@ document.addEventListener('DOMContentLoaded', function () {
         .catch(function(error) {
             return console.log("Error" + error);
         })
-    
+
+        // Que se abran las recomendaciones
+      var recom = document.querySelector('#ver-recomendaciones')
+      recom.addEventListener ("click", function() {
+        // cuando clickeas en el boton se abren las recomendaciones
+            var ul = document.querySelector("ul.recomen")
+            ul.classList.toggle("display-none")
+    })
+        })
+
+        
     // Que se abran las recomendaciones
       var recom = document.querySelector('#ver-recomendaciones')
       recom.addEventListener ("click", function() {
