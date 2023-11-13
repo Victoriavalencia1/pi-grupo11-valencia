@@ -539,6 +539,12 @@ h6{
     justify-content: center;
 }
 
+.titulos{
+    width: 100%;
+    text-align: center;
+}
+
+
 
 /* vamos a hacer responsive*/
 @media(max-width: 420px){

@@ -51,7 +51,9 @@ document.addEventListener('DOMContentLoaded', function () {
         })
     
         .then(function(data) {
-            console.log(data);
+            if(data.results.length==0){
+                alert("No hay recomendaciones")
+              }
     
             var ul = document.querySelector("ul.recomen")
     
@@ -63,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             li += `<li class='li recomendados-item'>
                         <p class='titulos'>${title}</p>
-                        <a href='detalle-Pelicula.html?idSerie=${id}'>
+                        <a href='detalle-serie.html?idSerie=${id}'>
                             <img class="imgPelis" src="https://image.tmdb.org/t/p/w500/${foto}" >
                         </a>
                    </li>`

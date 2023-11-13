@@ -11,8 +11,11 @@ document.addEventListener('DOMContentLoaded', function () {
   let fechaEstreno= document.querySelector(".fecha");
   let sinopsis= document.querySelector(".textodesc");
   let genero= document.querySelector(".botongenero");
+  let duracion= document.querySelector(".duracion");
 
   let urlDetalleSerie = `https://api.themoviedb.org/3/movie/${id_movie}?api_key=${acaVaLaAPIKey}`;
+
+  console.log(urlDetalleSerie);
 
   fetch(urlDetalleSerie)
   .then(function(response) {
@@ -23,9 +26,10 @@ document.addEventListener('DOMContentLoaded', function () {
       console.log(data);
 
       imagen.src = `https://image.tmdb.org/t/p/w500/${data.poster_path}`;
-      titulo.innerText= data.name;
+      titulo.innerText= data.title;
+      duracion.innerText = `Duracion: ${data.runtime} minutos`;
       calificacion.innerText = `Popularidad: ${data.popularity}`;
-      fechaEstreno.innerText = `Fecha de estreno: ${data.first_air_date}`;
+      fechaEstreno.innerText = `Fecha de estreno: ${data.release_date}`;
       sinopsis.innerText= `Sinopsis: ${data.overview}`;
       let generos = data.genres.map((genre) => genre.name);
       genero.innerText = `${generos.join(", ")}`;
@@ -37,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 
-
+/*recomendaciones*/
   var urlParams = new URLSearchParams(window.location.search);
       var query = urlParams.get("idPelicula");
       var url = `https://api.themoviedb.org/3/movie/${id_movie}/recommendations?api_key=${acaVaLaAPIKey}`
@@ -51,19 +55,22 @@ document.addEventListener('DOMContentLoaded', function () {
       })
   
       .then(function(data) {
-          console.log(data);
+          if(data.results.length==0){
+            alert("No hay recomendaciones")
+          }
   
           var ul = document.querySelector("ul.recomen")
   
           let li = "";
+          console.log(data.results);
           for (var i = 0; i < 5; i++) {
           var id = data.results[i].id;
-          var title = data.results[i].name;
+          var title = data.results[i].title;
           var foto = data.results[i].poster_path;
 
           li += `<li class='li recomendados-item'>
                       <p class='titulos'>${title}</p>
-                      <a href='detalle-Pelicula.html?idSerie=${id}'>
+                      <a href='detalle-Pelicula.html?idPelicula=${id}'>
                           <img class="imgPelis" src="https://image.tmdb.org/t/p/w500/${foto}" >
                       </a>
                  </li>`
