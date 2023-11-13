@@ -31,8 +31,15 @@ document.addEventListener('DOMContentLoaded', function () {
       calificacion.innerText = `Popularidad: ${data.popularity}`;
       fechaEstreno.innerText = `Fecha de estreno: ${data.release_date}`;
       sinopsis.innerText= `Sinopsis: ${data.overview}`;
-      let generos = data.genres.map((genre) => genre.name);
-      genero.innerText = `${generos.join(", ")}`;
+      let generos = data.genres;
+        let generosSerie= "";
+        let generoContainer= document.querySelector(".botongenero");
+
+        for (let i =0;  i< generos.length; i++) {
+            generosSerie += `<a class="botongenero" href="./detalle-genero.html?id=${generos[i].id}"> ${generos[i].name}</a>`
+        };
+
+        generoContainer.innerHTML += generosSerie;
 
   })
 
