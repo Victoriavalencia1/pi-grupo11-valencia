@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
 /*recomendaciones*/
     var urlParams = new URLSearchParams(window.location.search);
         var query = urlParams.get("idSerie");
-        var url = `https://api.themoviedb.org/3/movie/"${query}/recommendations?api_key=${acaVaLaAPIKey}&language=en-US&page=1`
+        var url = `https://api.themoviedb.org/3/tv/${id_serie}/recommendations?api_key=${acaVaLaAPIKey}`
     
         let recomendaciones = document.querySelector("#button");
         recomendaciones.addEventListener("click", function () {
