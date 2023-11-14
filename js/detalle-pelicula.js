@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
   let urlDetalleSerie = `https://api.themoviedb.org/3/movie/${id_movie}?api_key=${acaVaLaAPIKey}`;
   let urlTrailerPelicula= `https://api.themoviedb.org/3/movie/${id_movie}/videos?api_key=${acaVaLaAPIKey}`;
 
+
   console.log(urlDetalleSerie);
   console.log(urlTrailerPelicula);
 
@@ -60,12 +61,15 @@ document.addEventListener('DOMContentLoaded', function () {
       console.log(data)
 
     const videoContainer = document.querySelector('.video-container');
-    
-    for (let i = 0; i < data.results.length; i++) {
-      videoContainer.innerHTML+= `<iframe width="560" height="315" src="https://www.youtube.com/embed/CliS6WzmR9U?si=653307906b5fc201380cd7da" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
-      
-    }
 
+    if (data.results[0].key != null){
+      for (let i = 0; i < 1; i++) {
+        videoContainer.innerHTML+= ` <div> 
+                                        <p> Trailer: </p>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/${data.results[i].key}?si=Nos9i3Oyq0ndkgNa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </div>`
+      }
+    }
 
   })
 

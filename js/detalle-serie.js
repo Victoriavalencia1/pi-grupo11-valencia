@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let genero= document.querySelector(".botongenero");
 
     let urlDetalleSerie = `https://api.themoviedb.org/3/tv/${id_serie}?api_key=${acaVaLaAPIKey}`;
+    let urlTrailerSerie = `https://api.themoviedb.org/3/tv/${id_serie}/videos?api_key=${acaVaLaAPIKey}`;
 
     fetch(urlDetalleSerie)
     .then(function(response) {
