@@ -62,14 +62,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const videoContainer = document.querySelector('.video-container');
 
-    if (data.results[0].key != null){
+    if (data.results && data.results.length > 0 && data.results[0].key != null){
       for (let i = 0; i < 1; i++) {
         videoContainer.innerHTML+= ` <div> 
                                         <p> Trailer: </p>
                                         <iframe width="560" height="315" src="https://www.youtube.com/embed/${data.results[i].key}?si=Nos9i3Oyq0ndkgNa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                     </div>`
       }
-    }
+    } else {
+      videoContainer.innerHTML += '<p class="mensaje_trailer"> <i class="fa-solid fa-triangle-exclamation"></i> Trailer: No hay trailer disponible para esta pelicula.</p>';
+  }
 
   })
 
