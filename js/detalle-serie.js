@@ -15,6 +15,10 @@ document.addEventListener('DOMContentLoaded', function () {
     let urlDetalleSerie = `https://api.themoviedb.org/3/tv/${id_serie}?api_key=${acaVaLaAPIKey}`;
     let urlTrailerSerie = `https://api.themoviedb.org/3/tv/${id_serie}/videos?api_key=${acaVaLaAPIKey}`;
 
+
+    console.log(urlDetalleSerie);
+    console.log(urlTrailerSerie);
+
     fetch(urlDetalleSerie)
     .then(function(response) {
         return response.json()
@@ -42,6 +46,32 @@ document.addEventListener('DOMContentLoaded', function () {
 
     .catch(function(error) {
         console.log(error);
+        
+    });
+
+    fetch(urlTrailerPelicula)
+    .then(function(response) {
+      return response.json()
+    })
+    .then(function(data) {
+
+        console.log(data)
+
+    const videoContainer = document.querySelector('.video-container');
+
+    if (data.results[0].key != null){
+      for (let i = 0; i < 1; i++) {
+        videoContainer.innerHTML+= ` <div> 
+                                        <p> Trailer: </p>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/${data.results[i].key}?si=Nos9i3Oyq0ndkgNa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </div>`
+      }
+    }
+
+  })
+  
+    .catch(function(error) {
+    console.log(error);
     });
 
 
