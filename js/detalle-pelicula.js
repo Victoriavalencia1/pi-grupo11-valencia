@@ -14,8 +14,10 @@ document.addEventListener('DOMContentLoaded', function () {
   let duracion= document.querySelector(".duracion");
 
   let urlDetalleSerie = `https://api.themoviedb.org/3/movie/${id_movie}?api_key=${acaVaLaAPIKey}`;
+  let urlTrailerPelicula= `https://api.themoviedb.org/3/movie/${id_movie}/videos?api_key=${acaVaLaAPIKey}`;
 
   console.log(urlDetalleSerie);
+  console.log(urlTrailerPelicula);
 
   fetch(urlDetalleSerie)
   .then(function(response) {
@@ -41,11 +43,37 @@ document.addEventListener('DOMContentLoaded', function () {
 
         generoContainer.innerHTML += generosSerie;
 
+
   })
 
   .catch(function(error) {
       console.log(error);
   });
+
+
+  fetch(urlTrailerPelicula)
+  .then(function(response) {
+      return response.json()
+  })
+  .then(function(data) {
+
+      console.log(data)
+
+    const videoContainer = document.querySelector('.video-container');
+    
+    for (let i = 0; i < data.results.length; i++) {
+      videoContainer.innerHTML+= `<iframe width="560" height="315" src="https://www.youtube.com/embed/CliS6WzmR9U?si=653307906b5fc201380cd7da" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
+      
+    }
+
+
+  })
+
+  .catch(function(error) {
+      console.log(error);
+  });
+
+
 
 
 /*recomendaciones*/
@@ -91,23 +119,12 @@ document.addEventListener('DOMContentLoaded', function () {
           return console.log("Error" + error);
       })
 
-      // Que se abran las recomendaciones
-    var recom = document.querySelector('#ver-recomendaciones')
-    recom.addEventListener ("click", function() {
-      // cuando clickeas en el boton se abren las recomendaciones
-          var ul = document.querySelector("ul.recomen")
-          ul.classList.toggle("display-none")
-  })
+     
+   
+   
       })
 
       
-  // Que se abran las recomendaciones
-    var recom = document.querySelector('#ver-recomendaciones')
-    recom.addEventListener ("click", function() {
-      // cuando clickeas en el boton se abren las recomendaciones
-          var ul = document.querySelector("ul.recomen")
-          ul.classList.toggle("display-none")
-  })
 
 });
 
