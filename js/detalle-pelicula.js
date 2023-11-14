@@ -66,14 +66,14 @@ document.addEventListener('DOMContentLoaded', function () {
             alert("No hay recomendaciones")
           }
   
-          var ul = document.querySelector("ul.recomen")
+          let ul = document.querySelector("ul.recomen")
   
           let li = "";
           console.log(data.results);
           for (var i = 0; i < 5; i++) {
-          var id = data.results[i].id;
-          var title = data.results[i].title;
-          var foto = data.results[i].poster_path;
+          let id = data.results[i].id;
+          let title = data.results[i].title;
+          let foto = data.results[i].poster_path;
 
           li += `<li class='li recomendados-item'>
                       <p class='titulos'>${title}</p>

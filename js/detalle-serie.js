@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 alert("No hay recomendaciones")
               }
     
-            var ul = document.querySelector("ul.recomen")
+            let ul = document.querySelector("ul.recomen")
     
             let li = "";
             for (var i = 0; i < 5; i++) {

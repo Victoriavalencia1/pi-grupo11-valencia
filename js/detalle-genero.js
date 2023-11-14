@@ -6,4 +6,13 @@ let id_movie = qsObj.get("id_genero");
 
 
 
-const discoverEndpoint = 'https://api.themoviedb.org/3/discover/movie';
+
+fetch(urlDetalleSerie)
+    .then(function(response) {
+        return response.json()
+    })
+    .then(function(data) {
+
+        console.log(data);
+
+    })
