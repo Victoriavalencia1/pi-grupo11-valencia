@@ -8,8 +8,10 @@ let urlBuscadosPelicula= `https://api.themoviedb.org/3/search/movie?api_key=${ac
 let urlBuscadosSerie= `https://api.themoviedb.org/3/search/tv?api_key=${acaVaLaAPIKey}&query=${dataBuscada}`;
 
 
-let contenedorBuscador= document.querySelector(".contenedorpeliculas");
+let contenedorPeliculas= document.querySelector(".contenedorpeliculas");
+let contenedorSeries= document.querySelector(".contenedorSeries");
 let miPelicula= document.querySelector(".miBuscado");
+let miSerie= document.querySelector(".miBuscado");
 
 
 fetch(urlBuscadosPelicula)
@@ -39,7 +41,7 @@ fetch(urlBuscadosPelicula)
         
     }
        
-    contenedorBuscador.innerHTML = contenido;
+    contenedorPeliculas.innerHTML = contenido;
     miPelicula.innerText= dataBuscada;
 
 })
@@ -65,14 +67,15 @@ fetch(urlBuscadosSerie)
         console.log(miData[i]);
         contenido += `<article class="pelicula-1">
                         <h2>${miData[i].name}</h2>
-                        <a href="./detalle-Pelicula.html?idPelicula=${miData[i].id}"> 
+                        <a href="./detalle-serie.html?idSerie=${miData[i].id}"> 
                         <img class="fotopelicula" src="https://image.tmdb.org/t/p/w500/${miData[i].poster_path}"> 
                         </a>
                         <h6>${miData[i].first_air_date}</h6>
                     </article>`
     }
        
-    contenedorBuscador.innerHTML = contenido;
+    contenedorSeries.innerHTML = contenido;
+    miSerie.innerText= dataBuscada;
 
 })
 
