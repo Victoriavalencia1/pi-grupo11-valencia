@@ -9,7 +9,7 @@ let urlBuscadosSerie= `https://api.themoviedb.org/3/search/tv?api_key=${acaVaLaA
 
 
 let contenedorPeliculas= document.querySelector(".contenedorpeliculas");
-let contenedorSeries= document.querySelector(".contenedorSeries");
+let contenedorSeries= document.querySelector(".contenedorseries");
 let miPelicula= document.querySelector(".miBuscado");
 let miSerie= document.querySelector(".miBuscado");
 
