@@ -1,6 +1,7 @@
 let acaVaLaAPIKey = '99871c7c00dfc64424c61b446dd23039';
 
 let qs= location.search;
+
 let qsObj = new URLSearchParams(qs);
 let id_genero = qsObj.get("id_genero");
 
@@ -10,6 +11,7 @@ let generoPelicula          = document.querySelector("#generoPelicula");
 let generoSerie             = document.querySelector("#generoSerie");
 generoPelicula.innerText    = nombreGenero;
 generoSerie.innerText       = nombreGenero;
+let secciongeneroPeliculas = document.querySelector("#secciongeneroPeliculas");
 
 
 
@@ -20,7 +22,12 @@ let urlDiscoverPelicula = `https://api.themoviedb.org/3/discover/movie?api_key=$
       return respond.json()
     })
     .then(function(data) {
-      console.log(data.results);
+      console.log(data.results.length==0);
+
+      if(data.results.length==0) {
+        secciongeneroPeliculas.style.display = 'none';
+      }else{
+        
       let arrayDeResultados = data.results
       let li = "";
       let id = "";
@@ -57,7 +64,11 @@ let urlDiscoverPelicula = `https://api.themoviedb.org/3/discover/movie?api_key=$
 
       var genero = document.querySelector('.titulo')
       genero.innerText += nombreGenero
-
+      secciongeneroPeliculas.style.display = 'flex';
+      console.log(secciongeneroPeliculas);
+      }
+     
+      
     })
     .catch(function(error) {
       console.log("Error" + error) ;
