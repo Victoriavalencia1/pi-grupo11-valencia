@@ -55,7 +55,7 @@ let urlDiscoverPelicula = `https://api.themoviedb.org/3/discover/movie?api_key=$
           }
       }
 
-      var genero = document.querySelector('h1.title')
+      var genero = document.querySelector('.titulo')
       genero.innerText += nombreGenero
 
     })
@@ -97,7 +97,7 @@ let urlDiscoverSerie = `https://api.themoviedb.org/3/discover/tv?api_key=${acaVa
 
           puntuacion = arrayDeResultados[i].vote_average
           if (titulo!=null && poster!=null ) {
-            let tituloResultados = document.querySelector('.contenedorpeliculas')
+            let tituloResultados = document.querySelector('.misSeries')
             let url = "https://image.tmdb.org/t/p/original" + poster
 
             tituloResultados.innerHTML += `<div class="pelicula-1">
