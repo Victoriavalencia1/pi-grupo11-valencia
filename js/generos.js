@@ -6,6 +6,7 @@ let urlGeneroSerie= `https://api.themoviedb.org/3/genre/tv/list?api_key=${acaVaL
 
 let contenedorGenerosPeli = document.querySelector("#contenedorPeliGenero");
 let contenedorGenerosSerie= document.querySelector("#contenedorSerieGenero");
+
 fetch(urlGeneroPeli)
 .then(function(response) {
     return response.json()
@@ -20,7 +21,7 @@ fetch(urlGeneroPeli)
 
         console.log(miData[i]);
         contenido += `<li class="cajagenero"> 
-                        <a href="./detalle-genero.html?id_genero=${miData[i].id}">${miData[i].name}</a> 
+                        <a href="./detalle-genero.html?id_genero=${miData[i].id}&name=${miData[i].name}"">${miData[i].name}</a> 
                     </li>`
     }
        
@@ -30,6 +31,8 @@ fetch(urlGeneroPeli)
 .catch(function(error) {
     console.log(error);
 });
+
+
 /* /segundo fetch*/
 
 fetch(urlGeneroSerie)
@@ -46,7 +49,7 @@ fetch(urlGeneroSerie)
 
         console.log(miData[i]);
         contenido += `<li class="cajagenero"> 
-                        <a href="./detalle-Genero.html">${miData[i].name}</a> 
+                        <a href="./detalle-genero.html?id_genero=${miData[i].id}&name=${miData[i].name}">${miData[i].name}</a> 
                     </li>`
     }
        

@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let qs= location.search;
     let qsObj = new URLSearchParams(qs);
     let id_serie = qsObj.get("idSerie");
+    console.log(id_serie);
 
     let titulo= document.querySelector(".titulo3");
     let imagen= document.querySelector(".fotodetail");
@@ -12,8 +13,10 @@ document.addEventListener('DOMContentLoaded', function () {
     let sinopsis= document.querySelector(".textodesc");
     let genero= document.querySelector(".botongenero");
 
-    let urlDetalleSerie = `https://api.themoviedb.org/3/tv/${id_serie}?api_key=${acaVaLaAPIKey}`;
-    let urlTrailerSerie = `https://api.themoviedb.org/3/tv/${id_serie}/videos?api_key=${acaVaLaAPIKey}`;
+    /*let urlDetalleSerie = `https://api.themoviedb.org/3/tv/${id_serie}?api_key=${acaVaLaAPIKey}`;
+    let urlTrailerSerie = `https://api.themoviedb.org/3/tv/${id_serie}/videos?api_key=${acaVaLaAPIKey}`;*/
+    let urlDetalleSerie = `https://api.themoviedb.org/3/tv/${id_serie}}?api_key=${acaVaLaAPIKey}`;
+    let urlTrailerSerie= `https://api.themoviedb.org/3/tv/${id_serie}}/videos?api_key=${acaVaLaAPIKey}`;
     let urlReviews = `https://api.themoviedb.org/3/tv/${id_serie}/reviews?api_key=${acaVaLaAPIKey}`;
     
 

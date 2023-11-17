@@ -475,9 +475,7 @@ p{
     text-align: center;
 }
 .accion{
-    background-color: rgb(173, 169, 169);
     width: 100%;
-    height: 250px;
     background-repeat: no-repeat;
     background-size: 30%;
 }
