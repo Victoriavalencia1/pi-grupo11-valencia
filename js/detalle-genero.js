@@ -2,54 +2,69 @@ let acaVaLaAPIKey = '99871c7c00dfc64424c61b446dd23039';
 
 let qs= location.search;
 let qsObj = new URLSearchParams(qs);
-
 let id_genero = qsObj.get("id_genero");
 
-let urlDiscover = `https://api.themoviedb.org/3/discover/movie?api_key=${acaVaLaAPIKey}`;
 
 
-// Obtener nombre del género
-fetch(`https://api.themoviedb.org/3/genre/${id_genero}?api_key=${acaVaLaAPIKey}`)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    let nombreGeneroElement = document.getElementById('nombreGenero');
-    if (data.name) {
-      nombreGeneroElement.innerText = `Películas o Series del género ${data.name}`;
-    } else {
-      nombreGeneroElement.innerText = 'Género no encontrado';
-    }
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
 
-// Obtener listado de películas o series del género
-fetch(urlDiscover)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    let listaPeliculas = document.getElementById('listaPeliculas');
-    listaPeliculas.innerHTML = '';
+var url = `https://api.themoviedb.org/3/discover/movie?api_key=${acaVaLaAPIKey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=` + id_genero;
+    fetch(url)
+    .then(function(respond) {
+      return respond.json()
+    })
+    .then(function(data) {
+      console.log(data);
+      console.log(data.results);
+      var arrayDeResultados = data.results
+      console.log(arrayDeResultados);
+      console.log(arrayDeResultados.length);
+      var li = "";
+      var id = "";
+      var poster = ""
+      var fechaDeLanzamiento = ""
+      var puntuacion = ""
 
-    if (data.results && data.results.length > 0) {
-      data.results.forEach(function (pelicula) {
-        let li = document.createElement('li');
-        li.innerHTML = `<img src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}" alt="${pelicula.title}">
-                                <p>${pelicula.title}</p>`;
 
-        li.addEventListener('click', function () {
-          window.location.href = `detalle-serie.html?idSerie=${pelicula.id}`;
-        });
 
-        listaPeliculas.appendChild(li);
-      });
-    } else {
-      listaPeliculas.innerHTML = '<p>No se encontraron películas o series para este género.</p>';
-    }
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
+      for (var i = 0; i < arrayDeResultados.length; i++) {
+          console.log(arrayDeResultados[i]);
+
+          id = arrayDeResultados[i].id
+
+          titulo = arrayDeResultados[i].title
+          console.log(titulo);
+
+          poster = arrayDeResultados[i].poster_path
+          console.log(poster);
+
+          fechaDeLanzamiento = arrayDeResultados[i].release_date
+          console.log(fechaDeLanzamiento);
+
+          puntuacion = arrayDeResultados[i].vote_average
+          console.log(puntuacion);
+
+          if (titulo!=null && poster!=null ) {
+            var tituloResultados = document.querySelector('.contenedorgenero')
+            var url = "https://image.tmdb.org/t/p/original" + poster
+
+            li ="<li class=pelicula-1 >"
+              li += "<p class= 'titulos info'>" + titulo + "</p>"
+              li += "<img class='imgPelis' class='info' src=" + url  + ">"
+              if (fechaDeLanzamiento!= null) {
+                li += "<p class='puntuacion'> <span> Lanzada el:</span> " + fechaDeLanzamiento + "</p>"
+              }
+              li += "<p class='puntuacion'> <span> Puntuación:</span> " + puntuacion  + "/10</p>"
+            li += "</li>"
+
+            tituloResultados.innerHTML += "<a href='detalle-Pelicula.html?id=" + id + "'>"+ li + "</a>"
+
+          }
+      }
+
+      var genero = document.querySelector('h1.title')
+      genero.innerText += name
+
+    })
+    .catch(function(error) {
+      console.log("Error" + error) ;
+    })
