@@ -13,8 +13,6 @@ document.addEventListener('DOMContentLoaded', function () {
     let sinopsis= document.querySelector(".textodesc");
     let genero= document.querySelector(".botongenero");
 
-    /*let urlDetalleSerie = `https://api.themoviedb.org/3/tv/${id_serie}?api_key=${acaVaLaAPIKey}`;
-    let urlTrailerSerie = `https://api.themoviedb.org/3/tv/${id_serie}/videos?api_key=${acaVaLaAPIKey}`;*/
     let urlDetalleSerie = `https://api.themoviedb.org/3/tv/${id_serie}}?api_key=${acaVaLaAPIKey}`;
     let urlTrailerSerie= `https://api.themoviedb.org/3/tv/${id_serie}}/videos?api_key=${acaVaLaAPIKey}`;
     let urlReviews = `https://api.themoviedb.org/3/tv/${id_serie}/reviews?api_key=${acaVaLaAPIKey}`;
@@ -44,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let generoContainer= document.querySelector(".botongenero");
 
         for (let i =0;  i< generos.length; i++) {
-            generosSerie += `<a class="botongenero" href="./detalle-genero.html?id=${generos[i].id}"> ${generos[i].name}</a>`
+            generosSerie += `<a class="botongenero" href="./detalle-genero.html?id=${generos[i].id}&name=${generos[i].name}"> ${generos[i].name}</a>`
         };
 
         generoContainer.innerHTML += generosSerie;
