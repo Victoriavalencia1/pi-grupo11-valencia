@@ -1,0 +1,16 @@
+
+
+Los adicionales que elegimos fueron los siguientes:
+
+    1. Loader de carga en resultados de búsqueda: si la búsqueda tarda en cargar los resultados deberá aparecer 
+    un spinner, gif animado o mensaje "Buscando…" que dé al usuario referencia de que el proceso se está ejecutando. 
+    El elemento debe ocultarse una vez que el contenido de la página se haya cargado por completo. Puntaje: 0,5.
+
+    2. Trailer de serie y película: en la página de detalle debe mostrarse el trailer de la serie/ película. El 
+    end point en cada caso es "Videos" para series y "Videos" para películas. La plataforma que los muestra es Youtube. 
+    Tener en cuenta que puede haber más de uno. Deberán resolver cómo mostrar solo uno. En caso de que no haya trailers 
+    deberá indicarse en pantalla que no hay trailers disponibles. Puntaje: 1.
+
+    3. Reviews: usando el endpoint "Reviews" mostrar los comentarios de los usuarios en cada detalle (punto 4) de serie/ 
+    película.Los comentarios deben incluir el autor y el texto del comentario. Puntaje: 0,5.
+
