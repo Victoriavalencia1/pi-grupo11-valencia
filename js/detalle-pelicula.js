@@ -128,15 +128,12 @@ document.addEventListener('DOMContentLoaded', function () {
           return console.log("Error" + error);
       })
       })
+    
+/*reviews*/
+    const botonReviews = document.getElementById('button');
+    const ulReviews = document.querySelector('.reviews');
 
-      let botonReviews = document.getElementById('button');
-
-    // Obtén referencia al elemento <ul> que mostrará las reseñas
-    let ulReviews = document.querySelector('.recomen');
-
-    // Agrega un manejador de eventos al botón
     botonReviews.addEventListener('click', function () {
-        // Fetch de reseñas
         fetch(urlReviews)
             .then(function (response) {
                 return response.json();
@@ -147,20 +144,17 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
 
                 let li = "";
-                for (var i = 0; i < data.results.length; i++) {
+                for (var i = 0; i < 5; i++) {
                     let autor = data.results[i].author;
                     let contenido = data.results[i].content;
 
                     li += `<li class='li review-item'>
                             <p class='autor'>Autor: ${autor}</p>
-                            <p class='contenido'>Contenido: ${contenido}</p>
+                            <p class='contenido'>Review: ${contenido}</p>
                           </li>`;
                 }
 
-                // Mostrar las reseñas en el elemento <ul>
                 ulReviews.innerHTML = li;
-
-                // Mostrar el elemento <ul> que contiene las reseñas
                 ulReviews.classList.remove('display-none');
             })
             .catch(function (error) {

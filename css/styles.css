@@ -545,6 +545,11 @@ h6{
     text-align: center;
 }
 
+.reviews{
+    width: 100%;
+    text-align: justify;
+}
+
 
 
 /* vamos a hacer responsive*/
