@@ -14,11 +14,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let urlDetalleSerie = `https://api.themoviedb.org/3/tv/${id_serie}?api_key=${acaVaLaAPIKey}`;
     let urlTrailerSerie = `https://api.themoviedb.org/3/tv/${id_serie}/videos?api_key=${acaVaLaAPIKey}`;
+    let urlReviews = `https://api.themoviedb.org/3/movie/${id_movie}/reviews?api_key=${acaVaLaAPIKey}`;
     
 
 
     console.log(urlDetalleSerie);
     console.log(urlTrailerSerie);
+    console.log(urlReviews);
     
 
     fetch(urlDetalleSerie)
@@ -118,7 +120,40 @@ document.addEventListener('DOMContentLoaded', function () {
         .catch(function(error) {
             return console.log("Error" + error);
         })
-
-   
         })
+
+
+    /*reviews*/
+
+    const botonReviews = document.getElementById('button');
+    const ulReviews = document.querySelector('.reviews');
+
+    botonReviews.addEventListener('click', function () {
+        fetch(urlReviews)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                if (data.results.length === 0) {
+                    alert("No hay reseñas disponibles");
+                }
+
+                let li = "";
+                for (var i = 0; i < 5; i++) {
+                    let autor = data.results[i].author;
+                    let contenido = data.results[i].content;
+
+                    li += `<li class='li review-item'>
+                            <p class='autor'>Autor: ${autor}</p>
+                            <p class='contenido'>Review: ${contenido}</p>
+                          </li>`;
+                }
+
+                ulReviews.innerHTML = li;
+                ulReviews.classList.remove('display-none');
+            })
+            .catch(function (error) {
+                console.log("Error: " + error);
+            })
+    });
     })
