@@ -13,12 +13,19 @@ let contenedorSeries= document.querySelector(".contenedorseries");
 let miPelicula= document.querySelector(".miBuscado");
 let miSerie= document.querySelector(".miBuscado");
 
+let spinner = document.getElementById('spinner');
+
+    // Muestra el spinner al inicio de la búsqueda
+    spinner.style.display = 'block';
+
 
 fetch(urlBuscadosPelicula)
 .then(function(response) {
     return response.json()
 })
 .then(function(data) {
+
+    spinner.style.display = 'none';
 
     let miData = data.results;
 
