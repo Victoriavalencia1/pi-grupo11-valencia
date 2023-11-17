@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let urlDetalleSerie = `https://api.themoviedb.org/3/tv/${id_serie}?api_key=${acaVaLaAPIKey}`;
     let urlTrailerSerie = `https://api.themoviedb.org/3/tv/${id_serie}/videos?api_key=${acaVaLaAPIKey}`;
-    let urlReviews = `https://api.themoviedb.org/3/movie/${id_movie}/reviews?api_key=${acaVaLaAPIKey}`;
+    let urlReviews = `https://api.themoviedb.org/3/tv/${id_serie}/reviews?api_key=${acaVaLaAPIKey}`;
     
 
 
