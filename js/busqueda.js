@@ -24,7 +24,11 @@ fetch(urlBuscadosPelicula)
 
     let contenido= "";
 
-    for (let i = 0; i <9; i++) {
+    if (miData.length === 0) {
+        // No hay resultados, mostrar mensaje
+        contenedorPeliculas.innerHTML = "<p>No hay resultados para su búsqueda.</p>";
+    } else{
+        for (let i = 0; i <9; i++) {
 
         console.log(miData[i]);
 
@@ -43,7 +47,7 @@ fetch(urlBuscadosPelicula)
        
     contenedorPeliculas.innerHTML = contenido;
     miPelicula.innerText= dataBuscada;
-
+    }
 })
 
 .catch(function(error) {
@@ -62,7 +66,11 @@ fetch(urlBuscadosSerie)
 
     let contenido= "";
 
-    for (let i = 0; i <9; i++) {
+    if (miData.length === 0) {
+        // No hay resultados, mostrar mensaje
+        contenedorSeries.innerHTML = "<p>No hay resultados para su búsqueda.</p>";
+    }else{
+        for (let i = 0; i <9; i++) {
 
         console.log(miData[i]);
         contenido += `<article class="pelicula-1">
@@ -76,7 +84,7 @@ fetch(urlBuscadosSerie)
        
     contenedorSeries.innerHTML = contenido;
     miSerie.innerText= dataBuscada;
-
+    }
 })
 
 .catch(function(error) {

@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function () {
       })
     
 /*reviews*/
-    const botonReviews = document.getElementById('button');
+    const botonReviews = document.getElementById('buttonReviews');
     const ulReviews = document.querySelector('.reviews');
 
     botonReviews.addEventListener('click', function () {
