@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let generoContainer= document.querySelector(".botongenero");
 
         for (let i =0;  i< generos.length; i++) {
-            generosSerie += `<a class="botongenero" href="./detalle-genero.html?id_genero=${generos[i].id}"> ${generos[i].name}</a>`
+            generosSerie += `<a class="botongenero" href="./detalle-genero.html?id_genero=${generos[i].id}&name=${generos[i].name}"> ${generos[i].name}</a>`
         };
 
         generoContainer.innerHTML += generosSerie;
