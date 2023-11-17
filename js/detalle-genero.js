@@ -107,6 +107,7 @@ let urlDiscoverSerie = `https://api.themoviedb.org/3/discover/tv?api_key=${acaVa
           fechaDeLanzamiento = arrayDeResultados[i].first_air_date
 
           puntuacion = arrayDeResultados[i].vote_average
+          
           if (titulo!=null && poster!=null ) {
             let tituloResultados = document.querySelector('.misSeries')
             let url = "https://image.tmdb.org/t/p/original" + poster

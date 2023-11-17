@@ -564,6 +564,9 @@ h6{
 
 .li-review-item {
     margin-bottom: 20px; 
+    text-align: justify;
+    margin-left: 210px;
+    margin-right: 200px;
 }
 
 

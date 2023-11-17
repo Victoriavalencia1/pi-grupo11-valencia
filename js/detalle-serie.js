@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let qs= location.search;
     let qsObj = new URLSearchParams(qs);
     let id_serie = qsObj.get("idSerie");
-    console.log(id_serie);
+    /*console.log(id_serie);*/
 
     let titulo= document.querySelector(".titulo3");
     let imagen= document.querySelector(".fotodetail");
@@ -38,11 +38,11 @@ document.addEventListener('DOMContentLoaded', function () {
         fechaEstreno.innerText = `Fecha de estreno: ${data.first_air_date}`;
         sinopsis.innerText= `Sinopsis: ${data.overview}`;
         let generos = data.genres;
-        let generosSerie= "";
-        let generoContainer= document.querySelector(".botongenero");
+            let generosSerie= "";
+            let generoContainer= document.querySelector(".botongenero");
 
         for (let i =0;  i< generos.length; i++) {
-            generosSerie += `<a class="botongenero" href="./detalle-genero.html?id=${generos[i].id}&name=${generos[i].name}"> ${generos[i].name}</a>`
+            generosSerie += `<a class="botongenero" href="./detalle-genero.html?id_genero=${generos[i].id}&name=${generos[i].name}"> ${generos[i].name}</a>`
         };
 
         generoContainer.innerHTML += generosSerie;
@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
             let title = data.results[i].name;
             let foto = data.results[i].poster_path;
 
-            li += `<li class='li recomendados-item'>
+            li += `<li class='li-recomendados-item'>
                         <p class='titulos'>${title}</p>
                         <a href='detalle-serie.html?idSerie=${id}'>
                             <img class="imgPelis" src="https://image.tmdb.org/t/p/w500/${foto}" >
@@ -140,11 +140,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
 
                 let li = "";
-                for (var i = 0; i < 5; i++) {
+                for (var i = 0; i < data.results.length  && i < 3; i++) {
                     let autor = data.results[i].author;
                     let contenido = data.results[i].content;
 
-                    li += `<li class='li review-item'>
+                    li += `<li class='li-review-item'>
                             <p class='autor'>Autor: ${autor}</p>
                             <p class='contenido'>Review: ${contenido}</p>
                           </li>`;
