@@ -20,7 +20,7 @@ fetch(urlGeneroPeli)
 
         console.log(miData[i]);
         contenido += `<li class="cajagenero"> 
-                        <a href="./detalle-Genero.html">${miData[i].name}</a> 
+                        <a href="./detalle-genero.html?id_genero=${miData[i].id}">${miData[i].name}</a> 
                     </li>`
     }
        
