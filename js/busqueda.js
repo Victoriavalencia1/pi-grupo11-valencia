@@ -13,10 +13,9 @@ let contenedorSeries= document.querySelector(".contenedorseries");
 let miPelicula= document.querySelector(".miBuscado");
 let miSerie= document.querySelector(".miBuscado");
 
-let spinner = document.getElementById('spinner');
 
     // Muestra el spinner al inicio de la búsqueda
-    spinner.style.display = 'block';
+        spinner.style.display = 'block';
 
 
 fetch(urlBuscadosPelicula)
@@ -96,4 +95,4 @@ fetch(urlBuscadosSerie)
 
 .catch(function(error) {
     console.log(error);
-});
+})
