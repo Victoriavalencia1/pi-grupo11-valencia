@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
 
                 let li = "";
-                for (var i = 0; i < 5; i++) {
+                for (var i = 0; i < data.results.length; i++) {
                     let autor = data.results[i].author;
                     let contenido = data.results[i].content;
 

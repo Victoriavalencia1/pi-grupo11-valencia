@@ -548,8 +548,9 @@ h6{
 .reviews{
     width: 100%;
     text-align: justify;
+    display: flex;
+    flex-direction: row;
 }
-
 
 
 /* vamos a hacer responsive*/

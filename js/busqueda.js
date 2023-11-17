@@ -28,7 +28,7 @@ fetch(urlBuscadosPelicula)
         // No hay resultados, mostrar mensaje
         contenedorPeliculas.innerHTML = "<p>No hay resultados para su búsqueda.</p>";
     } else{
-        for (let i = 0; i <9; i++) {
+        for (let i = 0; i <miData.length; i++) {
 
         console.log(miData[i]);
 
@@ -70,7 +70,7 @@ fetch(urlBuscadosSerie)
         // No hay resultados, mostrar mensaje
         contenedorSeries.innerHTML = "<p>No hay resultados para su búsqueda.</p>";
     }else{
-        for (let i = 0; i <9; i++) {
+        for (let i = 0; i <miData.length; i++) {
 
         console.log(miData[i]);
         contenido += `<article class="pelicula-1">

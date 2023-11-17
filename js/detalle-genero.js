@@ -56,7 +56,7 @@ let urlDiscover = `https://api.themoviedb.org/3/discover/movie?api_key=${acaVaLa
               li += "<p class='puntuacion'> <span> Puntuación:</span> " + puntuacion  + "/10</p>"
             li += "</div>"
 
-            tituloResultados.innerHTML += "<a href='detalle-Pelicula.html?id=" + id + "'>"+ li + "</a>"
+            tituloResultados.innerHTML += "<a href='detalle-Pelicula.html?idPelicula=" + id + "'>"+ li + "</a>"
 
           }
       }
