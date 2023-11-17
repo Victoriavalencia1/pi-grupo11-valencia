@@ -13,14 +13,17 @@ document.addEventListener('DOMContentLoaded', function () {
   let genero= document.querySelector(".botongenero");
   let duracion= document.querySelector(".duracion");
 
-  let urlDetalleSerie = `https://api.themoviedb.org/3/movie/${id_movie}?api_key=${acaVaLaAPIKey}`;
+  let urlDetallePelicula = `https://api.themoviedb.org/3/movie/${id_movie}?api_key=${acaVaLaAPIKey}`;
   let urlTrailerPelicula= `https://api.themoviedb.org/3/movie/${id_movie}/videos?api_key=${acaVaLaAPIKey}`;
+  let urlReviews = `https://api.themoviedb.org/3/movie/${id_movie}/reviews`
 
 
-  console.log(urlDetalleSerie);
+
+  console.log(urlDetallePelicula);
   console.log(urlTrailerPelicula);
+  console.log(urlReviews);
 
-  fetch(urlDetalleSerie)
+  fetch(urlDetallePelicula)
   .then(function(response) {
       return response.json()
   })
@@ -128,3 +131,48 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
+
+/*Reviews*/
+
+var urlParams = new URLSearchParams(window.location.search);
+      var query = urlParams.get("idPelicula");
+      var url = `https://api.themoviedb.org/3/movie/${id_movie}/reviews`
+  
+      let recomendaciones = document.querySelector("#button");
+      recomendaciones.addEventListener("click", function () {
+      
+      fetch(url)
+      .then(function(respond) {
+          return respond.json();
+      })
+  
+      .then(function(data) {
+          if(data.results.length==0){
+            alert("No hay recomendaciones")
+          }
+  
+          let ul = document.querySelector("ul.recomen")
+  
+          let li = "";
+          console.log(data.results);
+          for (var i = 0; i < 5; i++) {
+          let id = data.results[i].id;
+          let title = data.results[i].title;
+          let foto = data.results[i].poster_path;
+
+          li += `<li class='li recomendados-item'>
+                      <p class='titulos'>${title}</p>
+                      <a href='detalle-Pelicula.html?idPelicula=${id}'>
+                          <img class="imgPelis" src="https://image.tmdb.org/t/p/w500/${foto}" >
+                      </a>
+                 </li>`
+          }
+
+          ul.innerHTML = li
+  
+      })
+  
+      .catch(function(error) {
+          return console.log("Error" + error);
+      })
+      })
