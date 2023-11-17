@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
           let title = data.results[i].title;
           let foto = data.results[i].poster_path;
 
-          li += `<li class='li recomendados-item'>
+          li += `<li class='li-recomendados-item'>
                       <p class='titulos'>${title}</p>
                       <a href='detalle-Pelicula.html?idPelicula=${id}'>
                           <img class="imgPelis" src="https://image.tmdb.org/t/p/w500/${foto}" >
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     let autor = data.results[i].author;
                     let contenido = data.results[i].content;
 
-                    li += `<li class='li review-item'>
+                    li += `<li class='li-review-item'>
                             <p class='autor'>Autor: ${autor}</p>
                             <p class='contenido'>Review: ${contenido}</p>
                           </li>`;

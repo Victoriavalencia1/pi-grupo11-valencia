@@ -54,9 +54,9 @@ let urlDiscoverPelicula = `https://api.themoviedb.org/3/discover/movie?api_key=$
             let url = "https://image.tmdb.org/t/p/original" + poster
 
             tituloResultados.innerHTML += `<div class="pelicula-1">
-                                <h2>${titulo}</h2>
+                                <h2 class="titulos">${titulo}</h2>
             <a href="./detalle-Pelicula.html?idPelicula=${id}"> <img class="fotoavatar" src="${url}"> </a>
-            <p> ${fechaDeLanzamiento} </p>
+            <h6> ${fechaDeLanzamiento} </h6>
         </div>`
 
           }
@@ -112,10 +112,10 @@ let urlDiscoverSerie = `https://api.themoviedb.org/3/discover/tv?api_key=${acaVa
             let url = "https://image.tmdb.org/t/p/original" + poster
 
             tituloResultados.innerHTML += `<div class="pelicula-1">
-                                <h2>${titulo}</h2>
-            <a href="./detalle-Pelicula.html?idPelicula=${id}"> <img class="fotoavatar" src="${url}"> </a>
-            <p> ${fechaDeLanzamiento} </p>
-        </div>`
+                                <h2 class="titulos">${titulo}</h2>
+                                <a href="./detalle-serie.html?idSerie=${id}"> <img class="fotoavatar" src="${url}"> </a>
+                                <h6> ${fechaDeLanzamiento} </h6>
+                                </div>`
 
           }
       }

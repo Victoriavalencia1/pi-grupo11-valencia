@@ -484,10 +484,12 @@ p{
     margin-left: 10%;
     margin-right: 10%;
 }
+
 .pelisaccion{
-    color: white;
-    text-align: right;
-    padding: 15px;
+    color: red;
+    text-align: center;
+    padding: 5px;
+    font-size: 50px;
 }
 
 
@@ -549,6 +551,20 @@ h6{
     flex-direction: row;
 }
 
+.tituloParaGeneros{
+    font-size: 50px;
+}
+
+.reviews {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.li-review-item {
+    margin-bottom: 20px; 
+}
 
 
 
