@@ -7,6 +7,8 @@
     <title>ResultadoBusqueda</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 
+
+
 </head>
 <body>
 
@@ -48,10 +50,11 @@
             <section class="Peliculas">
                 
                 <div id="spinner" class="spinner">
-                    <img src="./img/spinner.gif" alt="Cargando...">
+                    <span class="uk-margin-small-right" uk-spinner="ratio: 3"></span>
+                    <span uk-spinner="ratio: 4.5"></span>
                     <p>Buscando...</p>
                 </div>
-                
+
                 <div class="contenedorpeliculas">
                 </div>
             </section>
@@ -73,5 +76,7 @@
 
 
         <script src= "./js/busqueda.js"></script>
+        
+
 </body>
 </html>
