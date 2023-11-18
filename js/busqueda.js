@@ -13,10 +13,7 @@ let contenedorSeries= document.querySelector(".contenedorseries");
 let miPelicula= document.querySelector(".miBuscado");
 let miSerie= document.querySelector(".miBuscado");
 
-let spinner = document.getElementById('spinner');
 
-    // Muestra el spinner al inicio de la búsqueda
-    spinner.style.display = 'block';
 
 
 fetch(urlBuscadosPelicula)
@@ -25,15 +22,14 @@ fetch(urlBuscadosPelicula)
 })
 .then(function(data) {
 
-    spinner.style.display = 'none';
 
     let miData = data.results;
 
     let contenido= "";
 
     if (miData.length === 0) {
-        // No hay resultados, mostrar mensaje
-        contenedorPeliculas.innerHTML = "<p>No hay resultados para su búsqueda.</p>";
+        /*No hay resultados, mostrar mensaje*/
+        contenedorPeliculas.innerHTML = "<p>Peliculas: No hay resultados para su búsqueda.</p>";
     } else{
         for (let i = 0; i <miData.length; i++) {
 
@@ -74,8 +70,8 @@ fetch(urlBuscadosSerie)
     let contenido= "";
 
     if (miData.length === 0) {
-        // No hay resultados, mostrar mensaje
-        contenedorSeries.innerHTML = "<p>No hay resultados para su búsqueda.</p>";
+        /*No hay resultados, mostrar mensaje*/
+        contenedorSeries.innerHTML = "<p>Series: No hay resultados para su búsqueda.</p>";
     }else{
         for (let i = 0; i <miData.length; i++) {
 

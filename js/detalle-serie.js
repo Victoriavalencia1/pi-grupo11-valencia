@@ -83,12 +83,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /*recomendaciones*/
  
-        let url = `https://api.themoviedb.org/3/tv/${id_serie}/recommendations?api_key=${acaVaLaAPIKey}`
+        let urlReview = `https://api.themoviedb.org/3/tv/${id_serie}/recommendations?api_key=${acaVaLaAPIKey}`
     
         let recomendaciones = document.querySelector("#button");
         recomendaciones.addEventListener("click", function () {
         
-        fetch(url)
+        fetch(urlReview)
         .then(function(respond) {
             return respond.json();
         })
@@ -151,7 +151,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
 
                 ulReviews.innerHTML = li;
-                ulReviews.classList.remove('display-none');
             })
             .catch(function (error) {
                 console.log("Error: " + error);
