@@ -31,11 +31,11 @@ fetch(urlBuscadosPelicula)
         /*No hay resultados, mostrar mensaje*/
         contenedorPeliculas.innerHTML = "<p>Peliculas: No hay resultados para su búsqueda.</p>";
     } else{
-        for (let i = 0; i <miData.length; i++) {
+        for (let i = 0; i <miData.length && i < 12; i++) {
 
         console.log(miData[i]);
 
-        
+        if (miData[i].poster_path) {
             contenido += `<article class="pelicula-1">
                         <h2>${miData[i].title}</h2>
                         <a href="./detalle-Pelicula.html?idPelicula=${miData[i].id}"> 
@@ -43,7 +43,7 @@ fetch(urlBuscadosPelicula)
                         </a>
                         <h6>${miData[i].release_date}</h6>
                     </article>`
-        
+        }
 
         
     }
@@ -73,9 +73,10 @@ fetch(urlBuscadosSerie)
         /*No hay resultados, mostrar mensaje*/
         contenedorSeries.innerHTML = "<p>Series: No hay resultados para su búsqueda.</p>";
     }else{
-        for (let i = 0; i <miData.length; i++) {
+        for (let i = 0; i <miData.length && i < 12; i++) {
 
         console.log(miData[i]);
+        if (miData[i].poster_path) {
         contenido += `<article class="pelicula-1">
                         <h2>${miData[i].name}</h2>
                         <a href="./detalle-serie.html?idSerie=${miData[i].id}"> 
@@ -84,6 +85,7 @@ fetch(urlBuscadosSerie)
                         <h6>${miData[i].first_air_date}</h6>
                     </article>`
     }
+}
        
     contenedorSeries.innerHTML = contenido;
     miSerie.innerText= dataBuscada;
