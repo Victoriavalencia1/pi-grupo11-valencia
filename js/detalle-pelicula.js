@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
       imagen.src = `https://image.tmdb.org/t/p/w500/${data.poster_path}`;
       titulo.innerText= data.title;
       duracion.innerText = `Duracion: ${data.runtime} minutos`;
-      calificacion.innerText = `Popularidad: ${data.popularity}`;
+      calificacion.innerText = `Popularidad: ${data.vote_average}`;
       fechaEstreno.innerText = `Fecha de estreno: ${data.release_date}`;
       sinopsis.innerText= `Sinopsis: ${data.overview}`;
       let generos = data.genres;

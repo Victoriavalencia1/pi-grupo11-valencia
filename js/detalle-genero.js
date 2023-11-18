@@ -12,6 +12,7 @@ let generoSerie             = document.querySelector("#generoSerie");
 generoPelicula.innerText    = nombreGenero;
 generoSerie.innerText       = nombreGenero;
 let secciongeneroPeliculas = document.querySelector("#secciongeneroPeliculas");
+let secciongeneroSeries = document.querySelector("#secciongeneroSeries");
 
 
 
@@ -62,8 +63,6 @@ let urlDiscoverPelicula = `https://api.themoviedb.org/3/discover/movie?api_key=$
           }
       }
 
-      var genero = document.querySelector('.titulo')
-      genero.innerText += nombreGenero
       secciongeneroPeliculas.style.display = 'flex';
       console.log(secciongeneroPeliculas);
       }
@@ -85,9 +84,13 @@ let urlDiscoverSerie = `https://api.themoviedb.org/3/discover/tv?api_key=${acaVa
       return respond.json()
     })
     .then(function(data) {
-      console.log(data);
-      let arrayDeResultados = data.results
+      console.log(data.results.length==0);
 
+      if(data.results.length==0) {
+        secciongeneroSeries.style.display = 'none';
+      }else{
+
+      let arrayDeResultados = data.results;
       let li = "";
       let id = "";
       let poster = ""
@@ -107,7 +110,7 @@ let urlDiscoverSerie = `https://api.themoviedb.org/3/discover/tv?api_key=${acaVa
           fechaDeLanzamiento = arrayDeResultados[i].first_air_date
 
           puntuacion = arrayDeResultados[i].vote_average
-          
+
           if (titulo!=null && poster!=null ) {
             let tituloResultados = document.querySelector('.misSeries')
             let url = "https://image.tmdb.org/t/p/original" + poster
@@ -120,7 +123,8 @@ let urlDiscoverSerie = `https://api.themoviedb.org/3/discover/tv?api_key=${acaVa
 
           }
       }
-
+      secciongeneroSeries.style.display = 'flex';
+      }
   
 
     })
