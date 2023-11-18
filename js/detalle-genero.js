@@ -38,7 +38,7 @@ let urlDiscoverPelicula = `https://api.themoviedb.org/3/discover/movie?api_key=$
 
 
 
-      for (let i = 0; i < arrayDeResultados.length; i++) {
+      for (let i = 0; i < arrayDeResultados.length && i < 12; i++) {
 
           id = arrayDeResultados[i].id
 
@@ -99,7 +99,7 @@ let urlDiscoverSerie = `https://api.themoviedb.org/3/discover/tv?api_key=${acaVa
 
 
 
-      for (let i = 0; i < arrayDeResultados.length; i++) {
+      for (let i = 0; i < arrayDeResultados.length && i < 12; i++) {
 
           id = arrayDeResultados[i].id
 

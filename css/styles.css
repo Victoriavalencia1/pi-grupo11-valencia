@@ -575,6 +575,7 @@ h6{
 }
 
 
+
 /* vamos a hacer responsive*/
 @media(max-width: 420px){
 
@@ -655,7 +656,7 @@ body{
 }
 
 .titulo3{
-    font-size: 80px;
+    font-size: 60px;
     text-align: center;
 }
 
@@ -712,7 +713,7 @@ p{
 }
 
 .generosgeneros{
-    height: 2300px;
+    height: 2700px;
 }
 
 .contenedorgenero{
@@ -726,6 +727,18 @@ p{
     align-items: center;
     justify-content: space-evenly;
     align-self: center;
+}
+.textodesc{
+    width: 60%;
+    text-align: center;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 }
